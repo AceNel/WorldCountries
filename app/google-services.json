@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1008038045381",
+    "firebase_url": "https://myworld-f8b73.firebaseio.com",
+    "project_id": "myworld-f8b73",
+    "storage_bucket": "myworld-f8b73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008038045381:android:4490fbb68bb8d832b732ac",
+        "android_client_info": {
+          "package_name": "com.nel.moringa.MyWorld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008038045381-67t26pif7tgbbepdkerer2fvtotqoded.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nel.moringa.MyWorld",
+            "certificate_hash": "4c85098f4452fc0baabe1059df2f60885a4dd146"
+          }
+        },
+        {
+          "client_id": "1008038045381-qk7bhjigekl5a17g98m3c2j55dh8pfqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6WY2wVPlRhKUc-dDzgUjtbvmF2YJXgUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008038045381-qk7bhjigekl5a17g98m3c2j55dh8pfqi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
