@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".activity.CountryDetailsActivity">
+
+<item
+    android:id="@+id/action_logout"
+    android:title="Logout"
+    android:visible="true"
+    app:showAsAction="never" />
+
+<item
+    android:id="@+id/action_get_country_details"
+    android:title="@string/country_details"
+    app:showAsAction="ifRoom"
+    app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
+
+<item
+    android:id="@+id/action_get_device_details"
+    android:title="@string/my_device"
+    app:showAsAction="never" />
+</menu>
