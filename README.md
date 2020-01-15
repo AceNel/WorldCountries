@@ -1,10 +1,35 @@
-# countries_of_the_world
-Countries of the world is an android application that reads a JSON dataset from a URL (https://restcountries.eu/rest/v2/all) allowing the user to browse the countries of the world based on continents and regions. This application demonstrates the use of liseteners, adapters, listview controls, Asynctask objects, JSON and is made with Java on Android studio. The user is also able to share data using the shareActionProvider class. This was a group project by Chris Truong and Kevin Chow
+# MyWorld
+My World is an android application where you get to learn about the countries of the world - capitals, populations, languages, religions, flags &amp; more. You can also test your knowledge of world geography with quiz mode.
 
-Screenshots:
+## Author
+ Nelson Kimani Karanja.
 
-<img src="images/ss1.png" width="230" height ="420">  <img src="images/ss5.png" width="230" height ="420">
+* Email `nelsonkimani96@gmail.com`
+* Github `https://github.com/AceNel`
 
-<img src="images/ss2.png" width="230" height ="420">  <img src="images/ss3.png" width="230" height ="420">  
 
-<img src="images/ss4.png" width="230" height ="420">
+## Technologies Used
+1. Java
+1. Android Libraries
+1. Figma for design
+1. extensible Markup Language Xml
+
+## Known Bugs
+* The Application is still in developent so some feature are are still lacking. And some may not work as expected.
+
+## SetUp and Installation.
+* Requirements
+
+        1.Java Sdk Installed
+
+        2. Android Studio IDE
+
+* SetUp
+  1. Clone this repository by adding this command to your terminal, `git clone https://github.com/AceNel/MyWorld.git`
+
+  1. Open the folder in android Studio and run the application to  get a build. Connect Your device Via Usb and the application will be installed in your phone.
+
+
+## License
+
+Proprietary (C) 2019 [Nelson Kimani](github.com/AceNel)
