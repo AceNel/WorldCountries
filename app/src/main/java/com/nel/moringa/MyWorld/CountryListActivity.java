@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import ca.bcit.ass1.MyWorld.model.Country;
+import com.nel.moringa.MyWorld.model.Country;
 
 public class CountryListActivity extends ListActivity {
 
