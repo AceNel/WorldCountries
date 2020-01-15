@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My World</string>
+    <string name="country_details">Country Details</string>
+    <string name="my_device">My Device</string>
+</resources>
