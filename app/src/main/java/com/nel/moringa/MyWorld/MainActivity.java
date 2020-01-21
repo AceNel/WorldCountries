@@ -1,6 +1,9 @@
 package com.nel.moringa.MyWorld;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +23,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -157,7 +165,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private void setRegionsList() {
 
-        ListView list = findViewById(R.id.regions_list);
+       // ListView list = findViewById(R.id.regions_list);
+
+        SwipeMenuListView list = (SwipeMenuListView) findViewById(R.id.regions_list);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 getBaseContext(), R.layout.region_row, R.id.region, regions.toArray(new String[0]));
@@ -174,6 +184,65 @@ public class MainActivity extends AppCompatActivity {
         });
 
         list.setAdapter(adapter);
+
+        SwipeMenuCreator creator = new SwipeMenuCreator() {
+
+            @Override
+            public void create(SwipeMenu menu) {
+//                // create "open" item
+//                SwipeMenuItem openItem = new SwipeMenuItem(
+//                        getApplicationContext());
+//                // set item background
+//                openItem.setBackground(new ColorDrawable(Color.rgb(0x00,	0x33,	0x66)));
+//                // set item width
+//                openItem.setWidth(170);
+//                // set item title
+//                openItem.setTitle("Open");
+//                // set item title fontsize
+//                openItem.setTitleSize(18);
+//                // set item title font color
+//                openItem.setTitleColor(Color.WHITE);
+//                // add to menu
+//                menu.addMenuItem(openItem);
+
+                // create "delete" item
+                SwipeMenuItem deleteItem = new SwipeMenuItem(
+                        getApplicationContext());
+                // set item background
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
+                        0x3F, 0x25)));
+                // set item width
+                deleteItem.setWidth(170);
+                // set a icon
+                deleteItem.setIcon(R.drawable.airport);
+                // add to menu
+                menu.addMenuItem(deleteItem);
+            }
+        };
+
+        list.setMenuCreator(creator);
+
+        list.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                switch (index) {
+                    case 0:
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_VIEW);
+                        String data = String.format("geo:%s,%s", 1.2921, 36.8219);
+
+                        intent.setData(Uri.parse(data));
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Log.d(TAG, "onMenuItemClick: clicked item " + index);
+                        break;
+                }
+                // false : close the menu; true : not close the menu
+                return false;
+            }
+        });
+
     }
 
 
